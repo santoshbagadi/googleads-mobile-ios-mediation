@@ -72,4 +72,28 @@
   return incent;
 }
 
++ (BOOL)containsRequiredUnifiesNativeAssets:(ALNativeAd *)nativeAd {
+  return nativeAd.title && nativeAd.description && nativeAd.ctaText
+  && nativeAd.iconURL && nativeAd.imageURL && nativeAd.imagePrecached;
+}
+
++ (BOOL)containsRequiredAppInstallNativeAssets:(ALNativeAd *)nativeAd {
+  return nativeAd.title && nativeAd.descriptionText && nativeAd.ctaText
+  && nativeAd.iconURL && nativeAd.imageURL && nativeAd.imagePrecached;
+}
+
+#pragma mark - Logging
+
++ (void)log:(NSString *)format, ... {
+  if (GADMAdapterAppLovinConstant.loggingEnabled) {
+    va_list valist;
+    va_start(valist, format);
+    NSString *message =
+    [[NSString alloc] initWithFormat:format arguments:valist];
+    va_end(valist);
+
+    NSLog(@"AppLovinAdapter: %@", message);
+  }
+}
+
 @end

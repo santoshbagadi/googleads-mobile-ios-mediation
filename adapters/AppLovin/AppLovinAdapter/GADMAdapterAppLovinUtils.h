@@ -34,6 +34,16 @@ NS_ASSUME_NONNULL_BEGIN
 + (ALIncentivizedInterstitialAd *)incentivizedInterstitialAdWithZoneIdentifier:
                                       (NSString *)zoneIdentifier sdk:(ALSdk *)sdk;
 
+/// Check whether or not the AppLovin native ad has all the required assets to map to a
+/// Unified native ad.
++ (BOOL)containsRequiredUnifiesNativeAssets:(ALNativeAd *)nativeAd;
+
+/// Check whether or not the AppLovin native ad has all the required assets to map to a
+/// App Install native ad.
++ (BOOL)containsRequiredAppInstallNativeAssets:(ALNativeAd *)nativeAd;
+
++ (void)log:(NSString *)format, ...;
+
 @end
 
 NS_ASSUME_NONNULL_END
