@@ -72,16 +72,6 @@
   return incent;
 }
 
-+ (BOOL)containsRequiredUnifiesNativeAssets:(ALNativeAd *)nativeAd {
-  return nativeAd.title && nativeAd.description && nativeAd.ctaText
-  && nativeAd.iconURL && nativeAd.imageURL && nativeAd.imagePrecached;
-}
-
-+ (BOOL)containsRequiredAppInstallNativeAssets:(ALNativeAd *)nativeAd {
-  return nativeAd.title && nativeAd.descriptionText && nativeAd.ctaText
-  && nativeAd.iconURL && nativeAd.imageURL && nativeAd.imagePrecached;
-}
-
 #pragma mark - Logging
 
 + (void)log:(NSString *)format, ... {

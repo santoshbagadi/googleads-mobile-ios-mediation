@@ -85,7 +85,7 @@
 }
 
 - (UIView *)mediaView {
-  GADNativeAdImage *nativeAdImage = (GADNativeAdImage *)self.nativeAdImages[0];
+  GADNativeAdImage *nativeAdImage = (GADNativeAdImage *)[self.nativeAdImages firstObject];
   UIImage *image = [nativeAdImage image];
   UIImageView *mainImageView = [[UIImageView alloc] initWithImage:image];
   return mainImageView;
