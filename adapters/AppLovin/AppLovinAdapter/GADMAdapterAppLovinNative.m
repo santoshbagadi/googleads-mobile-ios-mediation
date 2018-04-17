@@ -150,14 +150,14 @@ didFailToPrecacheVideoForAd
 /// Unified native ad.
 + (BOOL)containsRequiredUnifiesNativeAssets:(ALNativeAd *)nativeAd {
   return nativeAd.title && nativeAd.descriptionText && nativeAd.ctaText
-  && nativeAd.imageURL && nativeAd.imagePrecached;
+  && nativeAd.imageURL;
 }
 
 /// Check whether or not the AppLovin native ad has all the required assets to map to a
 /// App Install native ad.
 + (BOOL)containsRequiredAppInstallNativeAssets:(ALNativeAd *)nativeAd {
   return nativeAd.title && nativeAd.descriptionText && nativeAd.ctaText
-  && nativeAd.iconURL && nativeAd.imageURL && nativeAd.imagePrecached;
+  && nativeAd.iconURL && nativeAd.imageURL;
 }
 
 #pragma mark - Unused Methods
