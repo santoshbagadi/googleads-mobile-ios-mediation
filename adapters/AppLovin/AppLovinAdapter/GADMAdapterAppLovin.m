@@ -99,6 +99,8 @@ static const CGFloat kALBannerStandardHeight = 50.0f;
 
     if (!self.sdk) {
       [GADMAdapterAppLovinUtils log:@"Failed to initialize SDK"];
+    } else {
+      self.sdk.mediationProvider = ALMediationProviderAdMob;
     }
   }
   return self;
