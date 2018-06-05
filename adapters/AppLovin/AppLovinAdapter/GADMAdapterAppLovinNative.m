@@ -37,9 +37,6 @@
     self.connector = connector;
     self.sdk = [GADMAdapterAppLovinUtils retrieveSDKFromCredentials:connector.credentials];
 
-    // Set AdMob as the mediation provider.
-    self.sdk.mediationProvider = ALMediationProviderAdMob;
-
     if (!self.sdk) {
       [GADMAdapterAppLovinUtils log:@"Failed to initialize SDK"];
     }
