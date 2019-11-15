@@ -24,6 +24,9 @@
 
   ALSdk *sdk = [ALSdk sharedWithKey:sdkKey];
   [sdk setPluginVersion:GADMAdapterAppLovinConstant.adapterVersion];
+  
+  // Set AdMob as the mediation provider.
+  [sdk setMediationProvider:ALMediationProviderAdMob];
 
   return sdk;
 }
